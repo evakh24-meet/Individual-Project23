@@ -2,9 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css"/> 
     <title></title>
+
+    <style>     
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button, input{
+background-color: #5E548E;
+color: white;
+padding: 15px;
+font-size: 28px;
+border:double, black, 3px;
+border-radius: 12px;
+}
+
+#but{
+background-color: #5E548E;
+color: white;
+padding: 5px;
+font-size: 16px;
+border:double, black, 3px;
+border-radius: 12px;
+}
+
+img{
+  border-radius: 32px;
+  border: double;
+  height: 350px;
+}
+
+html
+{background-color: #E0B1CB;
+font-family: monospace;}
+
+p{
+  font-size: 24px;
+}
+
+h2{
+  font-size: 34px;
+  background-color:#9F86C0;
+  padding: 5px;
+}
+
+h1{background-color: #9F86C0;}
+</style>
 </head>
 <body>
+
     
+    <h1>Crochet Pattern Marketplace</h1>
+    <!-- <button href = 'cart.html'>Go to To-Do List</button> -->
+    <a href = '{{url_for("add_item")}}'><button>Add Your Own Crochet Pattern</button></a>
+    <br>
+    <br>
+    <form action = '/signout' method = 'GET'>
+      <input type = "Submit" value = 'Signout'>
+    </form>
+    <br>
+    <p> Welcome to the Crochet Pattern Marketplace where you can find patterns for your every need! Just click on the button in order to add your own crochet patterna and click image in order to access the pattern. Enjoy and crochet away all the stress from CS :) </p>
+    <br>
+    <br>
+    <br>
+<!-- <h2> Animals </h2>
+<div class="row">
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://www.allaboutami.com/wp-content/uploads/2016/12/wsi-imageoptim-L1017697-logo-800x571.jpg" alt="Elephant" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+
+  </div>
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://static.wixstatic.com/media/1c7a96_0d8bf87c83c64c7589c4d2f7c185306c~mv2.jpg/v1/fill/w_1000,h_721,al_c,q_85,usm_0.66_1.00_0.01/1c7a96_0d8bf87c83c64c7589c4d2f7c185306c~mv2.jpg" alt="Frog" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+
+  </div>
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://beautifuldawndesigns.net/wp-content/uploads/2022/06/crochet-dinosaur-pattern5.png" alt="Dinosaur" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+
+
+  </div>
+</div>
+
+<h2> Clothing </h2>
+
+<div class="row">
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://www.hookedonhomemadehappiness.com/wp-content/uploads/2022/10/ChecketBucketHatFEATURED.jpg" alt="Hat" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+
+  </div>
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://i.ytimg.com/vi/lfYk-BO4bpA/maxresdefault.jpg" alt="Scarf" style="height: 350px" width = '500px'>
+    <button> Add to To-Do List </button>
+  </div>
+
+  </div>
+  <div class="column">
+    <div class = 'square'>
+    <img src= 'https://makeanddocrew.com/wp-content/uploads/2020/11/easy-crochet-hat-pattern-free-13.jpg' alt="Beanie" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+  </div>
+</div>
+
+<h2> Granny Squares </h2>
+
+<div class="row">
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://justbcrafty.com/wp-content/uploads/2019/04/Dainty-Daisy-Granny-Square1.jpg" alt="Daisy" style="height: 350px">
+    <button> Add to To-Do List </button>
+  </div>
+  </div>
+
+  <div class="column">
+    <div class = 'square'>
+    <img src="https://www.crochet365knittoo.com/wp-content/uploads/2017/12/granny-square-square.jpg" alt="Solid" style="height: 350px" width = '450px'>
+    <button> Add to To-Do List </button>
+  </div>
+
+  </div>
+  <div class="column">
+    <div class = 'square'>
+    <img src= 'https://www.goldenlucycrafts.com/wp-content/uploads/2021/08/Crochet-heart-granny-square.jpg' alt="Beanie" style="height: 350px" width = '375px'>
+    <button> Add to To-Do List </button>
+  </div>
+  </div>
+</div> -->
+
+{%for item in items%}
+<a href = '{{items[item]["item_link"]}}'>
+<img src = '{{items[item]["item_image"]}}'>
+</a>
+<button id = 'but'>{{items[item]['item_name']}}</button>
+{%endfor%}
+
 </body>
 </html>

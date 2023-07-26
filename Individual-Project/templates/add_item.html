@@ -1,0 +1,48 @@
+<style>
+form, h1 {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+button, #sub{
+background-color: #5E548E;
+color: white;
+padding: 15px;
+font-size: 28px;
+border:double, black, 3px;
+border-radius: 12px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+html{background-color: #E0B1CB;
+font-family: monospace;}
+</style>
+
+<h1> Add Your Own Crochet Pattern To Market Place</h1>
+
+<form action = '/add_item' method = 'POST'>
+
+<label> Name of Pattern</label>
+<input type="text" name="item_name">
+<br>
+<label> Add Link to Image of Pattern</label>
+<input type="text" name="item_image">
+<br>
+<label>Add Link to the Pattern Itself</label>
+<input type="text" name="item_link">
+<br>
+<input type="submit" name="submit" id = 'subm'>
+
+
+</form>
+

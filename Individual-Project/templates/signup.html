@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <title></title>
+<style>
+form, h1 {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+button, #sub{
+background-color: #5E548E;
+color: white;
+padding: 15px;
+font-size: 28px;
+border:double, black, 3px;
+border-radius: 12px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+html{background-color: #E0B1CB;
+font-family: monospace;}
+
+/*h1,form {
+  width: 300px;
+  border: 10px #9F86C0;
+  padding: 50px;
+  margin: 20px;
+  background-color: #9F86C0;
+}*/
+
+</style>
+</head>
+<body>
+    <h1> Sign Up </h1>
+
+<form method = 'POST' action = '/signup'>
+    <label>Email</label>
+    <br>
+    <input type = 'email' name = 'email'>
+    <br>
+    <label>Password</label>
+    <br>
+    <input type = 'password' name = 'password'>
+    <br>
+    <br>
+    <br>
+    <input id= 'sub' type = 'submit'>
+</form>
+</form>
+</body>
+</html>

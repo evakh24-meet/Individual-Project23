@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <title>Title</title>
+</head>
+<body>
+        <!-- Title -->
+    <form method = 'POST' action = '/rate'>
+        <div>
+            <label>Rating from one to five*</label>
+            <div class="input-group">
+                <input type="radio"  name="rate"> 1
+                <input type="radio"  name="rate"> 2
+                <input type="radio"  name="rate"> 3
+                <input type="radio"  name="rate"> 4
+                <input type="radio"  name="rate"> 5
+                <br>
+            </div>
+        </div>
+
+        <!-- Text -->
+        <div>
+            <label>Text*</label>
+            <div class="input-group">
+                <input type="text"  name="text" maxlength="280">
+            </div>
+        </div>
+                <!-- Button -->
+        <div>
+            <input href ='/all_ratings' type="submit"/>
+        </div>
+    </form>
+</body>
+</html>
